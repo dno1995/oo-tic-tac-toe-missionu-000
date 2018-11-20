@@ -59,43 +59,43 @@ class TicTacToe
     end
   end
 
-  def won?
-    WIN_COMBINATIONS.detect do |win_combination|
-      (@board[win_combination[0]] == @board[win_combination[1]]
-      && @board[win_combination[1]] == @board[win_combination[2]]
-      && @board[win_combination[0]] != ' ')
-    end
-  end
-
-  def full?
-    @board.none?{|spot| spot == " "}
-  end
-  
-  def draw?
-    won?.nil? && full? == true
-  end
-  
-  def over?
-    !won?.nil? || draw? == true
-  end
-  
-  def winner
-    if won?.nil?
-      won?
-    else
-      @board[won?[0]]
-    end
-  end
-  
-  def play
-    until over? == true
-      turn
-    end
-  
-    if !winner.nil?
-      puts "Congratulations #{winner(@board)}!"
-    else
-      puts "Cat's Game!"
-    end
-  end
+  # def won?
+  #   WIN_COMBINATIONS.detect do |win_combination|
+  #     (@board[win_combination[0]] == @board[win_combination[1]]
+  #     && @board[win_combination[1]] == @board[win_combination[2]]
+  #     && @board[win_combination[0]] != ' ')
+  #   end
+  # end
+  # 
+  # def full?
+  #   @board.none?{|spot| spot == " "}
+  # end
+  # 
+  # def draw?
+  #   won?.nil? && full? == true
+  # end
+  # 
+  # def over?
+  #   !won?.nil? || draw? == true
+  # end
+  # 
+  # def winner
+  #   if won?.nil?
+  #     won?
+  #   else
+  #     @board[won?[0]]
+  #   end
+  # end
+  # 
+  # def play
+  #   until over? == true
+  #     turn
+  #   end
+  # 
+  #   if !winner.nil?
+  #     puts "Congratulations #{winner(@board)}!"
+  #   else
+  #     puts "Cat's Game!"
+  #   end
+  # end
 end
