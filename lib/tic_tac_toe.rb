@@ -28,23 +28,23 @@ class TicTacToe
   def valid_move?(index)
     index.between?(0,8) && !position_taken?(index)
   end
-  #
-  # def move(index, token)
-  #   @board[index] = token
-  # end
-  #
-  # def input_to_index(input)
-  #   input.to_i-1
-  # end
-  #
-  # def turn_count
-  #   @board.select {|position| position != ' '}.length
-  # end
-  #
-  # def current_player
-  #   turn_count.even? ? 'X' : 'O'
-  # end
-  #
+  
+  def move(index, token)
+    @board[index] = token
+  end
+  
+  def input_to_index(input)
+    input.to_i-1
+  end
+  
+  def turn_count
+    @board.select {|position| position != ' '}.length
+  end
+  
+  def current_player
+    turn_count.even? ? 'X' : 'O'
+  end
+  
   # def turn
   #   puts "Please enter 1-9:"
   #   input = gets
