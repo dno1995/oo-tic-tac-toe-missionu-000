@@ -74,8 +74,7 @@ class TicTacToe
   end
 
   def over?
-    # !won?.nil? || draw? == true
-    won? || draw? #? true : false
+    won? || draw?
   end
 
   def winner
@@ -91,7 +90,7 @@ class TicTacToe
       turn
     end
 
-    if !winner.nil?
+    if winner
       puts "Congratulations #{winner(@board)}!"
     else
       puts "Cat's Game!"
