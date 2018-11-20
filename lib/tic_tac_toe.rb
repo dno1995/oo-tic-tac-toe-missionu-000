@@ -13,21 +13,21 @@ class TicTacToe
   [0,4,8],
   [2,4,6]]
 
-  # def display_boar
-  #   puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
-  #   puts "-----------"
-  #   puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
-  #   puts "-----------"
-  #   puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
-  # end
-  #
-  # def position_taken?(index)
-  #   @board[index] != '' && @board[index] != ' ' && @board[index] != nil
-  # end
-  #
-  # def valid_move?(index)
-  #   index.between?(0,8) && !position_taken?(index)
-  # end
+  def display_boar
+    puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
+    puts "-----------"
+    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
+    puts "-----------"
+    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
+  end
+  
+  def position_taken?(index)
+    @board[index] != '' && @board[index] != ' ' && @board[index] != nil
+  end
+  
+  def valid_move?(index)
+    index.between?(0,8) && !position_taken?(index)
+  end
   #
   # def move(index, token)
   #   @board[index] = token
