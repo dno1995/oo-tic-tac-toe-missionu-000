@@ -71,7 +71,7 @@ describe './lib/tic_tac_toe.rb' do
 
       it 'stops playing if someone has won' do
         game = TicTacToe.new
-        board = ["X", "X", "X", " ", " ", " ", " ", " ", " "]
+        board = ["X", "X", "X", "O", "O", " ", " ", " ", " "]
         game.instance_variable_set(:@board, board)
 
         allow($stdout).to receive(:puts)
