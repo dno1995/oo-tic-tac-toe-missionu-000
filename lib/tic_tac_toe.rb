@@ -66,19 +66,19 @@ class TicTacToe
   #     && @board[win_combination[0]] != ' ')
   #   end
   # end
-  # 
+  #
   # def full?
   #   @board.none?{|spot| spot == " "}
   # end
-  # 
+  #
   # def draw?
   #   won?.nil? && full? == true
   # end
-  # 
+  #
   # def over?
   #   !won?.nil? || draw? == true
   # end
-  # 
+  #
   # def winner
   #   if won?.nil?
   #     won?
@@ -86,12 +86,12 @@ class TicTacToe
   #     @board[won?[0]]
   #   end
   # end
-  # 
+  #
   # def play
   #   until over? == true
   #     turn
   #   end
-  # 
+  #
   #   if !winner.nil?
   #     puts "Congratulations #{winner(@board)}!"
   #   else
