@@ -45,57 +45,57 @@ class TicTacToe
     turn_count.even? ? 'X' : 'O'
   end
 
-  # def turn
-  #   puts "Please enter 1-9:"
-  #   input = gets
-  #   index = input_to_index(input)
-  #   token = current_player
-  #   if valid_move?(index) == true
-  #     move(index, token)
-  #     display_board
-  #   else
-  #     puts "Invalid move"
-  #     turn
-  #   end
-  # end
-  #
-  # def won?
-  #   WIN_COMBINATIONS.detect do |win_combination|
-  #     (@board[win_combination[0]] == @board[win_combination[1]]
-  #     && @board[win_combination[1]] == @board[win_combination[2]]
-  #     && @board[win_combination[0]] != ' ')
-  #   end
-  # end
-  #
-  # def full?
-  #   @board.none?{|spot| spot == " "}
-  # end
-  #
-  # def draw?
-  #   won?.nil? && full? == true
-  # end
-  #
-  # def over?
-  #   !won?.nil? || draw? == true
-  # end
-  #
-  # def winner
-  #   if won?.nil?
-  #     won?
-  #   else
-  #     @board[won?[0]]
-  #   end
-  # end
-  #
-  # def play
-  #   until over? == true
-  #     turn
-  #   end
-  #
-  #   if !winner.nil?
-  #     puts "Congratulations #{winner(@board)}!"
-  #   else
-  #     puts "Cat's Game!"
-  #   end
-  # end
+  def turn
+    puts "Please enter 1-9:"
+    input = gets
+    index = input_to_index(input)
+    token = current_player
+    if valid_move?(index) == true
+      move(index, token)
+      display_board
+    else
+      puts "Invalid move"
+      turn
+    end
+  end
+  
+  def won?
+    WIN_COMBINATIONS.detect do |win_combination|
+      (@board[win_combination[0]] == @board[win_combination[1]]
+      && @board[win_combination[1]] == @board[win_combination[2]]
+      && @board[win_combination[0]] != ' ')
+    end
+  end
+  
+  def full?
+    @board.none?{|spot| spot == " "}
+  end
+  
+  def draw?
+    won?.nil? && full? == true
+  end
+  
+  def over?
+    !won?.nil? || draw? == true
+  end
+  
+  def winner
+    if won?.nil?
+      won?
+    else
+      @board[won?[0]]
+    end
+  end
+  
+  def play
+    until over? == true
+      turn
+    end
+  
+    if !winner.nil?
+      puts "Congratulations #{winner(@board)}!"
+    else
+      puts "Cat's Game!"
+    end
+  end
 end
