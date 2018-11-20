@@ -45,19 +45,19 @@ class TicTacToe
     turn_count.even? ? 'X' : 'O'
   end
 
-  # def turn
-  #   puts "Please enter 1-9:"
-  #   input = gets
-  #   index = input_to_index(input)
-  #   token = current_player
-  #   if valid_move?(index) == true
-  #     move(index, token)
-  #     display_board
-  #   else
-  #     puts "Invalid move"
-  #     turn
-  #   end
-  # end
+  def turn
+    puts "Please enter 1-9:"
+    input = gets.chomp
+    index = input_to_index(input)
+    token = current_player
+    if valid_move?(index) == true
+      move(index, token)
+      display_board
+    else
+      puts "Invalid move"
+      turn
+    end
+  end
 
   # def won?
   #   WIN_COMBINATIONS.detect do |win_combination|
